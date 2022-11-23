@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg--color:#f5f7fd;
+    --text--color:#1d1d1d;
+}
+html{
+    font-family: 'Lato', sans-serif;
+}
+body{
+    -webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+background-color: var(--bg--color);
+color: var(--text--color);
+}
+header{
+    margin-top: 24px;
+}
+header img{
+    width: 100px;
+}
+.light_message{
+    visibility: hidden;
+    position: absolute;
+    top: 90%;
+    right: 2px;
+    font-size: 14px;
+    color: var(--text--color);
+}
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color:#8888A7;
+}
+.form_login--container {
+    border-radius: 12px;
+    margin: auto;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.form__login a {
+    text-decoration: none;
+}
+main a{
+    text-decoration: none;
+}
+main .from__message{
+    font-size: 14px;
+    font-weight: 600;
+}
+.box__capcha{
+    background-color: #FFA076;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 0 12px;
+    border-radius: 12px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+input.error{
+    outline: none;
+    border: 1px solid red;
+}
+.box_input{
+    position: relative;
+}
+.box_input:hover .box_message{
+    display: block;
+}
+.box_message{
+    position: absolute;
+    top: -48px;
+    right: 3%;
+    font-size: 12px;
+    text-align: center;
+    display: none;
+    width: 94%;
+    max-width: 300px;
+    content:"";
+    padding: 6px 12px;
+    color: white; 
+    background-color: rgb(10, 10, 10);
+}
+.box_message::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left:50%;
+    border: 10px solid;
+    border-color: rgb(15, 15, 15) transparent transparent transparent ;
+}
+@media screen and (max-width: 600px) {
+    .light_message{
+        color: var(--bg--color) !important;
+    }
+}
+.hidden{
+    display: none !important;
+}
+.show{
+    display: block !important;
+}
+.loading{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #191919;
+    display: flex;
+    z-index: 100;
+}
+.loading__image{
+    margin: auto;
+}
+.loading__logo--style{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    animation: rotateStyle 4s infinite;
+}
+.loading__brand--style{
+    visibility: hidden;
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+    animation:  HappenImage 4s infinite;
+    animation-delay: .3s;
+}
+.box__light{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 60px !important;
+
+}
+.row{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.box__light img{
+    width: 100%;
+    cursor: pointer;
+}
+.box__light:hover .light_message{
+    visibility: visible;
+
+}
+
+@media screen and (max-width: 768px) {
+    .box__light{
+        right: -8px;
+        top: 8%;
+    }
+    .light_message{
+        right: 8px;
+    }
+}
+@keyframes rotateStyle {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        
+    }
+}
+@keyframes HappenImage {
+    0%{
+      visibility: visible;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    100%{
+     
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+.modal__notice {
+    position: fixed;
+    top: 12px;
+    z-index: 5;
+    width: 60%;
+    left: 20%;
+    max-width: 900px;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  
+.modal__notice .modal__notice-container img {
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 99% 1%, 99% 51%, 99% 100%, 70% 100%, 30% 100%, 7% 100%, 4% 54%);
+            clip-path: polygon(0 0, 99% 1%, 99% 51%, 99% 100%, 70% 100%, 30% 100%, 7% 100%, 4% 54%);
+  }
+  
+  .modal__notice .modal__notice-container .modal__notice--message {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 800;
+    font-size: 18px;
+  }
+  
+  .modal__notice.hidden {
+    display: block !important;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+  @media (max-width: 992px) {
+    .modal__notice {
+      width: 100%;
+      left: 0;
+    }
+}

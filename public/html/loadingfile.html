@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-color: black;
+    }
+
+    .loading__film {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .box__loadding {
+        background-color: rgb(238, 224, 224);
+        width: 10px;
+        height: 20px;
+        margin-right: 1px;
+        border: 0.2px solid rgb(70, 70, 64);
+    }
+
+    .box__loadding.active {
+        background-color: rgb(233, 71, 71);
+    }
+</style>
+
+<body>
+    <div class="box">
+        <!-- Loading film -->
+        <div class="loading__film">
+            <div class="box__loadding active"></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+            <div class="box__loadding "></div>
+        </div>
+        <!--  end Loading film -->
+    </div>
+</body>
+<script>
+    fc_loadingfilm();
+  // loading fiml
+function fc_loadingfilm() {
+    let index = 0;
+    let loading__film_container = document.querySelector('.loading__film')
+    loading__film_container.classList.remove('hidden');
+    let loading__film = Array.from(loading__film_container.querySelectorAll('.box__loadding'));
+    function active_loading(loading__film, index) {
+        if (index == loading__film.length) {
+            loading__film.forEach(function (item) {
+                item.classList.remove('active');
+            })
+        }
+        loading__film[index].classList.add('active');
+    }
+    let settime = setInterval(() => {
+        index++; if (index > loading__film.length) { index = 0 };
+        active_loading(loading__film, index);
+    }, 200);
+    setInterval(() => {
+        clearTimeout(settime);
+        loading__film_container.classList.add('hidden');
+    }, 2000)
+}
+</script>
+
+</html>

@@ -1,0 +1,198 @@
+.manager_member {
+    width: 100%;
+    font-size: 17px !important;
+
+}
+
+.manager_member span {
+    font-size: 24px;
+    color: var(--text-color);
+
+}
+
+.manager_member button {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    background-color: #dbae43;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 12px 6px;
+}
+
+.manager_member-content button {
+    background-color: #6F5CC4;
+}
+
+.manager_member-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: var(--text-color);
+}
+
+.manager_member-head span {
+    font-size: 17px;
+    color: #6F5CC4;
+}
+
+.manager_member button:hover {
+    opacity: 0.9;
+}
+
+.form_member table {
+    width: 100%;
+    color: var(--text-color);
+    text-align: center;
+}
+
+table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 2px pink;
+    background-color: transparent;
+}
+
+table i {
+    font-size: 24px !important;
+}
+
+table i:hover {
+    color: yellow;
+}
+
+table a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+table h5 {
+    text-decoration: none;
+    background-color: #6F5CC4;
+    padding: 4px 0;
+    border-radius: 8px;
+}
+
+table h5:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.form_member table th {
+    height: 40px;
+}
+:root {
+    --bg: #1E1E2E;
+    --text-color: rgba(255, 255, 255, 0.97);
+    --head-bg: #303259;
+    --bg-input: #221d52;
+    --bg-sidebar: antiquewhite;
+    --text-sidebar: #81747f;
+    --text-sidebahv: #FFFF00;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+table.form_create_table td{
+    font-size: 16px;
+    text-align: center;
+}
+.form_create_table tr {
+    height: 42px;
+    
+}
+
+.container_content-comback i {
+    font-size: 36px;
+    color: white;
+    border-radius: 50px;
+    margin-top: 12px;
+}
+
+.container_content-comback i:hover {
+    color: #f5c85e;
+}
+
+.container_content-des {
+    font-size: 16px;
+    margin: 8px 0;
+
+}
+
+.container_home {
+    height: 52px;
+    padding: 0 32px;
+
+}
+
+.home_content .home {
+    color: var(--text-color);
+    padding: 0 32px;
+}
+
+.form_create_table .forn_create_head {
+    font-size: 18px;
+    text-align: right;
+    padding-right: 32px;
+    color: var(--text-color);
+   
+}
+
+.form_create_profile input {
+    width: 320px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--bg-input);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.97);
+    box-shadow: 1px 1px 4px #211d42;
+}
+
+.form_create_profile input:focus {
+    outline: 1px solid rgb(197, 60, 128);
+}
+
+.form_create_profile section {
+    padding: 4px 12px;
+    width: 300px;
+}
+
+.container_footer {
+    margin-top: 40px;
+    padding: 0px 24px;
+    border: 2px solid #ad7a7a;
+    box-shadow: 1px 0px 4px 3px #a59a5e;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.container_footer button {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    background-color: #dbae43;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 12px;
+
+
+}
+
+.container_footer button:hover {
+    opacity: 0.9;
+}
+table{
+    width: 100%;
+}

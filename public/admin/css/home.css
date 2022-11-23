@@ -1,0 +1,10 @@
+:root {
+    --bg: #1E1B3A;
+    --text-color: rgba(255, 255, 255, 0.70);
+    --head-bg: #303259;
+    --bg-input: #221d52;
+
+}
+body {
+    background-color: var(--bg);
+}

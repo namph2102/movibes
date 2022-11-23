@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/img/loading.png" type="image/x-icon">
+    <meta name="keywords" content="movie, movibes, hoc lap trinh python,python, namph,hoc lap trinh website">
+    <meta name="description"
+        content="MOVIBES là trang website chuyên cung cấp những bộ phim cũng như tài liệu cho anh em lập trình viên hoàn toàn miễn phí">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content=" " />
+    <meta property="og:image" content="/public/img/loading.png" />
+    <meta property="article:tag" content="Nghich Thien Chi Ton download" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/filmdetail.css" type="text/css">
+
+    <title>Chiếu phim Đấu phá thương khung</title>
+</head>
+<style>
+    #fluid_video_wrapper_video {
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
+
+<body>
+
+    <head>
+        <link rel="stylesheet" href="/assets/css/playfilm.css" type="text/css">
+    </head>
+    <!--  facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=3210650549173249&autoLogAppEvents=1"
+        nonce="hcvj92BH"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=3210650549173249&autoLogAppEvents=1" nonce="CaOkOUil"></script>
+    <!-- end facebook -->
+    <div class="loading hidden">
+        <div class="loading__image">
+            <img class="loading__logo--style" src="/public/img/loading.png" alt=""><img class="loading__brand--style" src="/public/img/logo.png" alt="">
+        </div>
+    </div>
+
+    <header class="container mb-0" id="header">
+        <div class="row  align-items-center" >
+            <div class="logo col-md-2 col-12">
+                <img class="logo__movibes" style="width: 100px;" class="mb-2" src="/public/img/logo.png" alt="">
+            </div>
+
+            <div class="show_at_tablet row col-md-10 col-12 justify-content-between align-items-center">
+                <div class="search d-flex align-items-center py-2  col-md-9  col-12">
+                    <i class="fa-solid fa-magnifying-glass pe-2 col-1 ps-1"></i>
+                    <input type="text" id="search_input" class="flex-grow-1 fs-6" placeholder="Tìm kiếm tên phim.....">
+
+                    <div class="result_search hidden">
+                        <div class="result_search--heading">
+                            <span>Kết quả tìm kiếm: <code> Đấu la đại lục</code></span>
+                        </div>
+                        <div class="result_search--container">
+
+                            <a href="http://">
+                                <figure>
+                                    <img src="/public/img/logo.png" alt="">
+                                    <figcaption>
+                                        <h2>Anh hùng xạ điêu</h2>
+                                        <p>Chuyển thể từ Anh Hùng bàn phím loroasdadsa asdasd asdas sad ssadas dasd
+                                            sdadas dssa dsad asdas asds am đẹp, chuyên tu huyện công pháp</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile  col-3">
+                    <div class="profile__notice py-2 px-3 me-2">
+                        <!-- Hiển thị thông báo -->
+                        <span class="profile__notice-number">3</span>
+                        <i><img src="/public/icon/bookmark.png" alt=""></i>
+                        <div class="bookmarks p-2">
+                            <div class="bookmark__head d-flex justify-content-between border-bottom pb-2">
+                                <strong title="Hãy thêm phim yêu thích tại đây" class="bookmark__head--title"><img
+                                        width="40" height="40" src="/public/img/bookmark1.png" alt="bookmarks">
+                                    BOOKMARKS</strong>
+                                <button onclick="removeBookmarks('deleteAll')" class="btn btn-danger p-1">X Remove
+                                    All</button>
+                            </div>
+                            <div class="bookmark__body">
+                                <!-- Loading boorkmark -->
+                                <div class="bookmarks__loadding hidden">
+                                    <div class="loading__image">
+                                        <img class="loading__logo--style" src="/public/img/loading.png" alt="">
+                                    </div>
+                                </div>
+                                <!--End Loading boorkmark -->
+                                <div class="bookmark__boxfilm my-2">
+                                    <figure
+                                        class="bookmark__boxfilm_avata p-2 border  border-primary border-1 d-flex justify-content-between align-items-center">
+                                        <img src="/public/img/avata.png" alt="">
+                                        <figcaption class="bookmark__boxfilm_ifm">
+                                            <file-name class="text-capitalize">thần mộ</file-name>
+                                            <br>
+                                            <film-time>21-07-2020 19:12:01</film-time>
+                                        </figcaption>
+                                        <button class="btn btn-danger rounded-circle">X</button>
+                                    </figure>
+
+                                    <figure
+                                        class="bookmark__boxfilm_avata p-2 border  border-primary border-1 d-flex justify-content-between align-items-center">
+                                        <img src="/public/img/avata.png" alt="">
+                                        <figcaption class="bookmark__boxfilm_ifm">
+                                            <file-name class="text-capitalize">thần mộ</file-name>
+                                            <br>
+                                            <film-time>21-07-2020 19:12:01</film-time>
+                                        </figcaption>
+                                        <button class="btn btn-danger rounded-circle">X</button>
+                                    </figure>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile__avata">
+                        <img src="/public/img/avata.png" alt="avata" class="profile__avata--image">
+                        <div class="profile_information border border-secondary border-2  py-2">
+                            <div class="profile__fullname text-capitalize fs-5 ">
+                                Phạm hoài Nam
+                            </div>
+                            <div class="profile__exp border-bottom pb-2">
+                                (Lv.8 : 68/60)
+                            </div>
+                            <div class="profile__avata--sub">
+                                <ul class="text-start">
+                                    <li><a href="/assets/html/profile.html"><i class="fa-regular fa-address-card"></i> Thông tin</a></li>
+                                    <li><a href="/assets/html/notice.html"><i class="fa-solid fa-bell"></i> Thông báo</a></li>
+                                    <li><a href=""><i class="fa-solid fa-ellipsis"></i> Đổi mật khẩu</a></li>
+                                    <li><a href=""><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <menu style="z-index: 2;" class="ps-1 py-2" title="Click vào đầy để hiện Menu">
+            <div class="menu__nav--bar d-xl-none col-2">
+                <i class="fa-solid fa-bars fs-4 btn_menu"></i>
+            </div>
+
+            <ul id="menu" class="menu__main hide_of_xl">
+                <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Trang chủ </a></li>
+                <li class="menu__navFist nav__kind"><a href="#">Thể loại <i class="fa-solid fa-caret-down"></i> </a>
+                    <!-- Danh sách Thể loại phim -->
+                    <ul class="sub__menu__navFist--nav sub__nav--kind">
+                        <li><a href="">Anime</a></li>
+                        <li><a href="">Lập trình</a></li>
+                        <li><a href="">Tu tiên</a></li>
+                        <li><a href="">Dã ngu</a></li>
+                    </ul>
+                </li>
+                <li><a href="/assets/html/showfilm.html"><i class="fa-solid fa-film"></i> Phim lẻ </a></li>
+                <li><a href="/assets/html/showfilm.html"><i class="fa-solid fa-repeat"></i> Phim đang chiếu </a></li>
+                <li class="menu__navFist nav__calendar"><a href="/assets/html/showfilm.html">Lịch chiếu phim <i
+                            class="fa-solid fa-caret-down"></i></a>
+                    <!-- Danh sách cách phim theo ngày  -->
+                    <ul class="sub__menu__navFist--nav sub__nav--calendar">
+                        <li><a href="">Thứ 2</a></li>
+                        <li><a href="">Thứ 3</a></li>
+                        <li><a href="">Thứ 4</a></li>
+                        <li><a href="">Thứ 5</a></li>
+                        <li><a href="">Thứ 6</a></li>
+                        <li><a href="">Thứ 7</a></li>
+                        <li><a href="">Chủ nhật</a></li>
+                    </ul>
+                </li>
+                <li><a href="/assets/html/showfilm.html"><i class="fa-regular fa-circle-check"></i> Phim hoàn thành</a></li>
+                <li><a href="/assets/html/showfilm.html"><i class="fa-regular fa-clock"></i> Phim sắp chiếu </a></li>
+            </ul>
+        </menu>
+    </header>
+    <!-- Modal -->
+
+    <!-- toast -->
+    <div id="toast" class="modal hidden">
+        <div class="modal_container  pb-2 mx-4">
+            <div class="modal_content row w-60 p-0 m-0">
+                <div class="modal_content-head col-12">
+                    <img class="toast__img" width="40" height="40" src="/public/img/danger.png" alt="toastmessage">
+                    <h1 class="fs-4">Thông Báo</h1>
+                    <button onclick="closeToast()" class="btn btn-danger me-1"><i
+                            class="fa-solid fa-x btn_close"></i></button>
+                </div>
+                <div class="modal_content-container px-2 my-3 col-12">
+                    <h2 class="modal_content-header fs-3">Thông báo </h2>
+                    <p class="modal_content-des">vui lòng không spam</p>
+                </div>
+                <div class="modal_content-footer px-2 col-12">
+                    <button onclick="closeToast()" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- thông báo tổng -->
+    <div class="modal__notice hidden">
+        <div class="modal__notice-container">
+            <img class="" src="/public/icon/bgnotice.png" alt="">
+            <span class="modal__notice--message">Vui lòng chọn đúng !</span>
+        </div>
+    </div>
+
+    <!-- thông báo nap tien -->
+    <div class="modal__toast_notice hidden">
+        <div class="modal__toast_notice--container" style="background-image: url(/public/icon/bg__topupnotice.png);">
+            <button onclick="closeModal('.modal__toast_notice')" class="btn  modal__toast_notice-close"></button>
+            <h1 class="modal__toast_notice--title fs-md-5 fs-6">
+                Xác minh ngân hàng
+            </h1>
+            <div class="modal__toast_notice--body row">
+
+                <h2 class="text-warning fs-6 col-12 text-center mt-3">Nhập thông tin ngân hàng của bạn để xác minh chính
+                    chủ !</h2>
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <label for="selectBank" class="d-block">
+                        <h6 class="text-start"> Ngân hàng:</h6>
+                        <select class="input__style--topup" name="" id="selectBank">
+                            <option  value="1">VIETCOMBANK</option>
+                            <option value="2">ARIBANK</option>
+                            <option value="3">BIDV</option>
+                            <option value="4">ACB</option>
+                            <option value="5">VIETINBANK</option>
+                        </select>
+                    </label>
+                    <label for="id-sm-tk" class="mt-2">
+                        <h6 class="text-start">Tên Tài Khoảng:</h6>
+                        <input type="text" placeholder="Tên Tài Khoảng" class="input__style--topup" id="id-sm-tk" />
+
+                    </label>
+                    <label for="id-sm-ck" class="mt-2">
+                        <h6 class="text-start">Số Tiền:</h6>
+                        <input type="text" oninput="formatnumber(this)" placeholder="Số Tiền"
+                            class="input__style--topup number number" id="id-sm-ck" />
+
+                    </label>
+
+                    <button class="btn_image--pecial"><img src="/public/icon/btn_accept.png" alt=""></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end Modal -->
+    <a class="gotoHead hidden" href="#header" title="Lên thanh Menu">
+        <button class="btn py-2 px-2"><img src="/public/icon/btn_movetop.png" alt=""></button>   
+    </a>
+    
+    <div class="modal__overlay hidden">
+    </div>
+    <!-- end Modal -->
+
+
+
+    <section class="player__wrapper container mb-2">
+        <div class="row">
+            <div class="col-12">
+                <!-- <iframe class="w-100"  height="500" src="https://www.youtube.com/embed/MlqUct9TZKg" title="341 | Liều Mình Đột Nhập Khu Phố Đèn Đỏ Tại Tokyo | Cuộc Sống ở Nhật | Đức Thư Vlogs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <video id="video" class="w-100"
+                    src="https://link.photo.talk.zdn.vn/photolinkv2/720/aHR0cHM6Ly9zY29udGVudC5jZG5pbnN0YWdyYW0uY29tL3YvdDM5LjI1NDQ3LTIvMzEyNzMxNzI3XzU2ODc5NzEwNTAxNjM0Nl84Nzg1NDMwNDMzNTk4MDkwNjZfbi5tcDQ/X25jX2NhdD0xMDUmdnM9ZTY0Njc5NWQ5YjFiMmFhOSZfbmNfdnM9SEJrc0ZRQVlKRWRGTFc5dmVFbGhlbTFTYkZWUlZVTkJRMjlsVjJ0TlgwNXFSVTFpYldScVFVRkJSaFVBQXNnQkFCVUFHQ1JIUldWaGJtaExVa1ZoU0U4NWEyTkRRVWhSYUdsVE5GVTFaREJZWW5KR2NVRkJRVVlWQWdMSUFRQkxCNGdTY0hKdlozSmxjM05wZG1WZmNtVmphWEJsQVRFTmMzVmljMkZ0Y0d4bFgyWndjd0FRZG0xaFpsOWxibUZpYkdWZmJuTjFZZ0FnYldWaGMzVnlaVjl2Y21sbmFXNWhiRjl5WlhOdmJIVjBhVzl1WDNOemFXMEFLR052YlhCMWRHVmZjM05wYlY5dmJteDVYMkYwWDI5eWFXZHBibUZzWDNKbGMyOXNkWFJwYjI0QUhYVnpaVjlzWVc1amVtOXpYMlp2Y2w5MmNXMWZkWEJ6WTJGc2FXNW5BQkZrYVhOaFlteGxYM0J2YzNSZmNIWnhjd0FWQUNVQUhBQUFKcHk5NklLRzVJWUZGUUlvQTBNelpSZ0xkblJ6WDNCeVpYWnBaWGNjRjBCOEYzUzhhbjc2R0Nsa1lYTm9YMmswYkdsMFpXSmhjMmxqWHpWelpXTm5iM0JmYUhFeVgyWnlZV2RmTWw5MmFXUmxieElBR0JoMmFXUmxiM011ZG5SekxtTmhiR3hpWVdOckxuQnliMlE0RWxaSlJFVlBYMVpKUlZkZlVrVlJWVVZUVkJzS2lCVnZaVzFmZEdGeVoyVjBYMlZ1WTI5a1pWOTBZV2NHYjJWd1gyaGtFMjlsYlY5eVpYRjFaWE4wWDNScGJXVmZiWE1CTUF4dlpXMWZZMlpuWDNKMWJHVUhkVzV0ZFhSbFpCTnZaVzFmY205cFgzSmxZV05vWDJOdmRXNTBBVEFSYjJWdFgybHpYMlY0Y0dWeWFXMWxiblFBREc5bGJWOTJhV1JsYjE5cFpBODJORGMyTXpBME1UQTBNVFUyT0RBU2IyVnRYM1pwWkdWdlgyRnpjMlYwWDJsa0VERXlNekl6T0RrNU5UYzBPRGswTlRrVmIyVnRYM1pwWkdWdlgzSmxjMjkxY21ObFgybGtFREUwTWpJeU9EYzRNVGd5TmpRek9UZ2NiMlZ0WDNOdmRYSmpaVjkyYVdSbGIxOWxibU52WkdsdVoxOXBaQTgxTURVek1EWTNOelE0TVRnNE1UQU9kblJ6WDNKbGNYVmxjM1JmYVdRQUpRSWNBQ1hFQVJzSGlBRnpCREV5TmpFQ1kyUUtNakF5TWkweE1DMHlNUU55WTJJQk1BTmhjSEFGVm1sa1pXOENZM1FaUTA5T1ZFRkpUa1ZFWDFCUFUxUmZRVlJVUVVOSVRVVk9WQk52Y21sbmFXNWhiRjlrZFhKaGRHbHZibDl6QlRRME9TNDFBblJ6RlhCeWIyZHlaWE56YVhabFgyVnVZMjlrYVc1bmN3QSUzRCZjY2I9MS03Jl9uY19zaWQ9MjliYWE5JmVmZz1leUoyWlc1amIyUmxYM1JoWnlJNkltOWxjRjlvWkNKOSZfbmNfb2hjPWJsemdwZUZhaENFQVg5aW5QdVEmX25jX2h0PXNjb250ZW50LmZzZ24yLTEuZm5hJm9oPTAwX0FUOWE1S1VWYnY5UjB1Y1Ixd053eWhuTU5iQVlCQVZXYzRnQ3dIaXYtNlhxb2cmb2U9NjM1OTBEMTcmX25jX3JpZD00NjgzNDg3NDI5OTA0OTk=">
+                    <p>Video không tồn tại</p>
+                </video>
+            </div>
+            <div class="facebookScocaial my-2">
+                <div class="row f-flex justify-content-between">
+                    <div class="col-md-2 col-12 order-md-1 order-2 my-2 my-md-0">
+                        <div class="fb-like" data-href="https://www.facebook.com/100087004991368" data-width="150px" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+                    </div>
+                    <div
+                        class="video__setting col-md-10 col-12 order-md-2 order-1 d-flex justify-content-end text-white">
+                        <div class="setting_video-group halim-prev-episode"><i class="fa-solid fa-backward"></i> Tập
+                            trước</div>
+                        <div class="setting_video-group halim-next-episode"><i class="fa-solid fa-forward"></i> Tập tiếp
+                            theo</div>
+                        <div class="setting_video-group" id="toggle-light"><i class="fa-regular fa-lightbulb"></i> Tắt
+                            đèn </div>
+                        <div class="setting_video-group" id="notice_errors"><img width="15" src="/public/img/danger.png"
+                                alt="previous image"> Báo lỗi</div>
+                        <div class="setting_video-group"><i class="fa-regular fa-eye"></i> <span>2.4M</span> lượt xem
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="content__website container">
+        <div class="row">
+            <!-- content firm -->
+            <main class="col-lg-8 col-12">
+                <!-- Lấy id tập phim  -->
+                <input type="text" hidden class="fiml_id" id="fiml_id" value="5">
+                <div class="box__list-movie-eps">
+                    <h2 class="list__movie-title text-warning fs-3"><img src="/public/img/serve.png" alt=""> Sever</h2>
+                    <h3 class="fs-6 my-3">Sever Chính xem mặc định là <code>740</code> nên nếu xem thấy LAG hãy chọn
+                        sever Vip bên dưới nhé đạo hữu.</h3>
+                    <div class="text-center my-4">
+                        <button title="Server HHD đang bảo trì" class="btn btn-primary">HHD</button> <button
+                            class="btn btn-warning" title="Server VIP đang bảo trì">VIP</button>
+                    </div>
+                    <ul class="list__movie-eps">
+                        <li><a href="">Tập 1</a></li>
+                        <li><a href="">Tập 2</a></li>
+                        <li><a href="">Tập 3</a></li>
+                        <li><a href="">Tập 4</a></li>
+                        <li><a href="">Tập 5</a></li>
+                        <li><a href="">Tập 6</a></li>
+                        <li><a href="">Tập 7</a></li>
+                        <li><a href="">Tập 8</a></li>
+                        <li><a href="">Tập 9</a></li>
+                        <li><a href="">Tập 10</a></li>
+                        <li><a href="">Tập 1</a></li>
+                        <li><a href="">Tập 2</a></li>
+                        <li><a href="">Tập 3</a></li>
+                        <li><a href="">Tập 4</a></li>
+                        <li><a href="">Tập 5</a></li>
+                        <li><a href="">Tập 6</a></li>
+                        <li><a href="">Tập 7</a></li>
+                        <li><a href="">Tập 8</a></li>
+                        <li><a href="">Tập 9</a></li>
+                        <li><a href="">Tập 10</a></li>
+                        <li><a href="">Tập 1</a></li>
+                        <li><a href="">Tập 2</a></li>
+                        <li><a href="">Tập 3</a></li>
+                        <li><a href="">Tập 4</a></li>
+                        <li><a href="">Tập 5</a></li>
+                        <li><a href="">Tập 6</a></li>
+                        <li><a href="">Tập 7</a></li>
+                        <li><a href="">Tập 8</a></li>
+                        <li><a href="">Tập 9</a></li>
+                        <li><a href="">Tập 10</a></li>
+                    </ul>
+                </div>
+                <div class="movie-imformation movie-imformation__box row d-flex  my-3">
+                    <div class="movie-bookmark__box hidden col-md-1  col-2">
+                        <img class="movie-bookmark" src="/public/img/bookmark.png" alt="addbookmark">
+                        <span class="movie-bookmark__des">Thêm vào Bookmark</span>
+                    </div>
+                    <div class="movie-bookmark__added col-md-1  col-2">
+                        <img width="60" height="60" class="movie-bookmark" src="/public/img/bookmark1.png"
+                            alt="bookmark">
+                        <span class="movie-bookmark__des">Đã thêm Bookmark</span>
+                    </div>
+                    <div class="movie-fiml col-6 ms-2">
+                        <h4 class="fs-5 m-0 text-capitalize ">van giói thần chủ | MOVIBES</h4>
+                        <p class="fs-6">Hãy chiến bên đây</p>
+                    </div>
+
+                    <div class="movie-ratings col-xl-5 col-12 ms-xl-0 ms-4" onmouseleave="handmouseLeave()">
+                        <img width="40" class="main_stars" height="40" src="/public/img/star.png" alt="">
+                        <span class="movie-bookmark__des">Đánh giá phim</span>
+                        <span class="movie-rating_simple"><span class="number__start--chose">5</span>/ <sub>5 (
+                                <span class="rating__view">1235</span> lượt )</sub> </span>
+                        <span class="movie-star_list_stat"><img width="20" onmouseover="handMouse(1)"
+                                onmouseup="handMouseUp(1)" data-index="1" height="20" src="/public/img/star.png"
+                                title="Bình chọn 1 sao" alt="star movibes"><img width="20" onmouseover="handMouse(2)"
+                                onmouseup="handMouseUp(2)" data-index="2" height="20" src="/public/img/star.png"
+                                title="Bình chọn 2 sao" alt="star movibes"><img width="20" onmouseover="handMouse(3)"
+                                onmouseup="handMouseUp(3)" data-index="3" height="20" src="/public/img/star.png"
+                                title="Bình chọn 3 sao" alt="star movibes"><img width="20" onmouseover="handMouse(4)"
+                                onmouseup="handMouseUp(4)" data-index="4" height="20" src="/public/img/star.png"
+                                title="Bình chọn 4 sao" alt="star movibes"><img width="20" onmouseover="handMouse(5)"
+                                onmouseup="handMouseUp(5)" data-index="5" height="20" src="/public/img/star.png"
+                                title="Bình chọn 5 sao" alt="star movibes"></span>
+                    </div>
+                </div>
+                <div class="movie-search__box my-4 col-12">
+                    <div class="filter-episode">
+                        <button class="btn btn-success"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                        <span>TÌM TẬP NHANH</span>
+                        <br>
+                        <input class="mt-2" id="search_input_esp" type="number" min="1" step="1"
+                            placeholder="Nhập số tập..." class="search-episode">
+                        <div class="box-message my-2"> </div>
+                        <div class="search_episode-list">
+                            <div class="loadding__episode hidden">
+                                <div class="loading__image">
+                                    <img class="loading__logo--style" src="/public/img/loading.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search_episode-list__container">
+
+                            </div>
+                            <!-- <a href="lnikphim" title="Đấu phá thương khung">26</a> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="halim--notice">
+                    <figure class="d-flex align-items-center">
+                        <img src="/public/img/danger.png" width="40" height="40" alt="canh-bao-mobives">
+                        <figcaption class="m-0">
+                            <ul class="m-0">
+                                <li>Mẹo tìm kiếm : thêm <strong>movibes</strong> phía sau để ra kết quả tốt nhất, ví
+                                    dụ : tru tien <strong>movibes</strong></li>
+                                <li>Đừng tiếc 1 <code>comment</code> bên dưới để đánh giá phim</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="d-flex align-items-center">
+                        <img src="/public/img/calendar.png" width="40" height="40" alt="canh-bao-mobives">
+                        <figcaption class="m-0">
+                            <ul class="m-0">
+                                <li>Phim cập nhập thứ <code>2</code> và thứ <code>6</code> mỗi ngày </li>
+
+                            </ul>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                </figure>
+                <section class="movie-detail__film">
+                    <h2>Nội dung phim</h2>
+                    <input type="checkbox" id="idcheckbox" hidden>
+                    <div class="movie-detail__film--container" aria-readonly="true">
+                        <h3>Xem phim Nghịch Thiên Chí Tôn Vietsub 2021:</h3>
+                        <p class="movie-des_fiml">
+                            Ngày xưa uy chấn chư thiên Thần Vực, vạn thế luân hồi sau thảm tao diệt môn! Tàn khốc nguyền
+                            rủa, vạn thế cừu hận, Đàm Vân lập chí, không còn trầm luân! Vì tình cảm chân thành, thân
+                            nhân,
+                            từ đây từng bước một giẫm lên cừu nhân thi thể siêu việt đỉnh phong! Nghịch thiên sát lục,
+                            tung
+                            hoành vạn giới, duy ta chí tôn! Gái gú thì khỏi nói
+                        </p>
+                        <p class="movie-des_fiml">
+                            Main: Đàm Vân (kiếp trước là Hồng Mông Chí Tôn)
+                        </p>
+                        <p class="movie-des_fiml">
+                            Gái: Thẩm Tố Băng, Mục Mộng Nghệ ( Đường Mộng Nghệ), Chung Ngô Thi Dao (Tư Hồng Thi Dao),
+                            Nam
+                            Cung Ngọc Thấm, Đường Hinh Doanh, Hoàng Phủ Ngọc (Đàm Đài Tiên Nhi), Công Tôn Nhược Hi, Cơ
+                            Ngữ
+                            Yên, Hiên Viên Nhu, Âu Dương Thiên Thiên, Tiết Tử Yên, Đông Phương Ngọc Thấu, Phương Tử Hề,
+                            Ngu
+                            Vân Hề, Tân Băng Tuyền, Trưởng Tôn Hiên Thất (Hỗn Độn Chí Tôn), Phùng Khuynh Thành
+                        </p>
+                        <h3>Cảnh giới tu luyện</h3>
+                        <ul>
+                            <li>Phàm giới: Linh Thai Cảnh, Thai Hồn Cảnh, Luyện Hồn Cảnh, Thần Hồn Cảnh, Thánh Hồn Cảnh,
+                                Hồn
+                                Mạch Cảnh, Thần Mạch Cảnh, Thần Vực Cảnh, Vực Thai Cảnh, Vũ Hóa Cảnh ( mỗi cảnh giới
+                                chia
+                                làm 9 cấp và đại viên mãn)</li>
+                            <li>Tiên giới: Phạt Tiên Cảnh, Luyện Tiên Cảnh, Đế Nhân Cảnh, Đế Thánh Cảnh, Đế Vương Cảnh,
+                                Đế
+                                Hoàng Cảnh, Đại Đế Cảnh (mỗi cảnh giới chia từ cấp 1 đến 12)</li>
+                            <li>Thần giới: Nhân Thần Cảnh, Địa Thần Cảnh, Thiên Thần Cảnh, Bán Thánh Cảnh, Đại Thánh
+                                Cảnh,
+                                Thánh Vương Cảnh, Thánh Hoàng Cảnh, Thần Vương Cảnh, Vĩnh Hằng Cảnh ( mỗi cảnh giới chia
+                                từ
+                                cấp 1 đến 9)</li>
+                            <li>Vĩnh Hằng Hóa Vũ: Nhân Đạo Vạn Vật Cảnh – Thượng Thần Cảnh, Thiên Đạo Giới Phạt Cảnh –
+                                Thần
+                                Tôn Cảnh, Càn Khôn Hồng Mông Cảnh – Chí Tôn Cảnh, Thần Đạo Thủy Nguyên Cảnh – Tổ Thần
+                                Cảnh,
+                                Vạn Vật Hóa Hư Cảnh – Tổ Vương Cảnh</li>
+                            <li>Thế Giới Chí Cao: Tổ Hoàng Cảnh -Thương Thiên Chi Tôn , Tổ Đế Cảnh – Bá Vương Vũ Trụ, Tổ
+                                Thánh Cảnh, Đạo Nhân Cảnh, Đạo Thần Cảnh, Đạo Vương Cảnh, Đạo Hoàng Cảnh, Đạo Đế Cảnh,
+                                Đạo
+                                Thánh Cảnh, Đạo Tổ Cảnh, Chí Cao Đạo Tổ Cảnh</li>
+                        </ul>
+                    </div>
+                    <div class="item-content-gradient"></div>
+                    <label for="idcheckbox">
+                        <span class="btn text-white idcheckbox">Mở rộng ...</span>
+                    </label>
+                </section>
+
+                <section class="movie-detail__film py-2">
+                    <input type="checkbox" id="idcheckboxseo" hidden>
+                    <div aria-readonly="true" class="mb-2 movie-detail__film--container movie-detail__tagSeo">
+                        <!-- Seo -->
+                        <a href="#" class="tag__seo" title="dowload hoat hinh trung quoc">dowload hoat hinh trung
+                            quoc</a>
+                        <a href="#" class="tag__seo" title="dowload hoat hinh trung quoc">movibes hoat hinh</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton">nghich thien chi ton</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton vietsub">nghich thien chi ton
+                            vietsub</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton phu de">nghich thien chi ton phu de</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton vietsub ton bo">nghich thien chi ton
+                            vietsub ton bo</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton vietsub full">nghich thien chi ton
+                            vietsub full</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton tap cuoi">nghich thien chi ton tap
+                            cuoi</a>
+                        <a href="#" class="tag__seo" title="nghich thien chi ton hd">nghich thien chi ton hd</a>
+                        <a href="#" class="tag__seo" title="xem phim hoat hinh trung quoc">xem phim hoat hinh trung
+                            quoc</a>
+                        <a href="#" class="tag__seo" title="hoat hinh trung quoc hot">hoat hinh trung quoc hot</a>
+                        <a href="#" class="tag__seo" title="hoat hinh trung quoc tron bo">hoat hinh trung quoc tron
+                            bo</a>
+                        <!-- end Seo -->
+                    </div>
+                    <div class="item-content-gradient mb-2"></div>
+                    <label for="idcheckboxseo">
+                        <span class="btn text-white idcheckboxseo">Mở rộng ...</span>
+                    </label>
+                </section>
+            </main>
+            <!-- end content firm -->
+
+            <aside class="col-lg-4 col-12">
+                <div class="aside__rank">
+                    <div class="aside__rank--head d-flex">
+                        <h3 class="fs-6 p-1 pb-2 me-2 ">Xếp hạng</h3>
+                        <div class="rank__day rank__day__list--btn">
+                            <button class="btn p-1 text-white active" data-day="day">Ngày</button>
+                            <button class="btn p-1 text-white" data-day="week">Tuần</button>
+                            <button class="btn p-1 text-white" data-day="month">Tháng</button>
+                            <button class="btn p-1 text-white" data-day="all">Tất cả</button>
+                        </div>
+                    </div>
+
+                    <div class="aside__rank--body my-3 ">
+                        <!-- Loading film -->
+                        <div class="loading__film loading__film__rank hidden">
+                            <div class="box__loadding hidden"></div>
+                            <div class="box__loadding active"></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                        </div>
+                        <!--  end Loading film -->
+                        <div class="list__film_ranking">
+
+                            <a href="#">
+                                <figure class="d-flex">
+                                    <div class="box__avata--rank">
+                                        <img src="https://hoathinh3d.com/wp-content/uploads/2021/02/dau-la-dai-luc-1-300x450.jpg"
+                                            alt="">
+                                    </div>
+                                    <figcaption>
+                                        <h4 class="fs-6">Đấu la đại lục</h4>
+                                        <div class="box__review-star">
+                                            <input type="number" hidden value="5">
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                        </div>
+                                        <div class="box__review-detail">
+                                            <p class="text-primary">12.6k <i class="fa-solid fa-eye"></i> Lượt xem</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+
+                            <a href="http://">
+                                <figure class="d-flex">
+                                    <div class="box__avata--rank">
+                                        <img src="https://hoathinh3d.com/wp-content/uploads/2021/02/dau-la-dai-luc-1-300x450.jpg"
+                                            alt="">
+                                    </div>
+                                    <figcaption>
+                                        <h4 class="fs-6">Đấu la đại lục</h4>
+                                        <div class="box__review-star">
+                                            <input type="number" hidden value="5">
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                        </div>
+                                        <div class="box__review-detail">
+                                            <p class="text-primary">12.6k <i class="fa-solid fa-eye"></i> Lượt xem</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="aside__rank aside__rank--course">
+                    <div class="aside__rank--head">
+                        <h4 class="fs-6 p-1 pb-2 me-2 text-danger fs-4">Khóa học</h4>
+                    </div>
+
+                    <div class="aside__rank--body my-3 ">
+                        <!-- Loading film -->
+                        <div class="loading__film loading__film_course hidden">
+                            <div class="box__loadding hidden"></div>
+                            <div class="box__loadding active"></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                            <div class="box__loadding "></div>
+                        </div>
+                        <!--  end Loading film -->
+                        <div class="aside__rank--container__course">
+                            <a href="http://">
+                                <figure class="d-flex">
+                                    <div class="box__avata--rank">
+                                        <img src="https://hoathinh3d.com/wp-content/uploads/2021/02/dau-la-dai-luc-1-300x450.jpg"
+                                            alt="">
+                                    </div>
+                                    <figcaption>
+                                        <h4 class="fs-6">Đấu la đại lục</h4>
+                                        <div class="box__review-star">
+                                            <input type="number" hidden value="5">
+                                            <div class="box--star haft"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                            <div class="box--star"></div>
+                                        </div>
+                                        <div class="box__review-detail">
+                                            <p class="text-primary">12.6k <i class="fa-solid fa-eye"></i> Lượt xem</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <article>
+        <div class="container conments px-0">
+            <div class="conments__header">
+                <div class="row">
+                    <div class="col-3">
+                        <button class="btn btn-danger btn_repeat"><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                    <div class="col-9 text-end">
+                        <button class="btn btn-danger btn__conments">Bình Luận</button>
+                        <button class="btn btn-danger btn_top ms-1">BXH</button>
+                        <button class="btn btn-danger btn_guide ms-1">Hướng Dẫn</button>
+                    </div>
+                </div>
+                <span class="px-2 my-2 d-inline-block">Nếu có lỗi khi sử dụng hãy thông báo cho mình : <a
+                        href="https://www.facebook.com/namhoai2102" target="_blank"
+                        rel="noopener noreferrer">https://www.facebook.com/namhoai2102</a></span>
+            </div>
+
+            <div class="conments__container">
+
+                <div class="products__loadding hidden">
+                    <div class="loading__image">
+                        <img class="loading__logo--style" src="/public/img/loading.png" alt="">
+                    </div>
+                </div>
+
+                <form class="conments__container__chat my-1">
+                    <textarea class="chating" name="" rows="1" placeholder="Viết bình luận..."></textarea>
+                    <button type="submit" class="btn btn-success"><i class="fa-solid fa-share pe-1"></i>Gửi</button>
+                </form>
+
+                <ul class="box__container--scrool menu__conment" id="binhluan">
+                    <li>
+                        <figure alt="Quản trị viên" title="Quản trị Viên">
+                            <div class="box__chat--profile">
+                                <img class="box__chat--image"
+                                    src="https://hhninja.xyz/assets/upload/yb6RY8JhDMrJ6DW1661886586.jpeg"
+                                    alt=" Phạm Hoài Nam ">
+                                <img src="/public/img/admin.png" class="box__chat--profile__vip" alt="member_vip"
+                                    title="Quản trị Viên">
+                                  
+                            </div>
+                            <figcaption>
+                                <h6 class="box__chat--nickname admin"> Admin (LV 4: 27/36)</h6>
+                                <ul class="d-flex box__chat--lists__icon">
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sư</span>
+                                    </li>
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                    </li>
+                                </ul>
+                                <time class="timed__chatting">46 phút trước</time>
+
+                                <div class="w-100">
+                                    <p class="box__chat--conment admin">
+                                        Mọi người xem phim vui vẻ
+                                    </p>
+                                </div>
+
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <div class="box__chat--profile">
+                                <img class="box__chat--image"
+                                    src="https://hhninja.xyz/assets/upload/yb6RY8JhDMrJ6DW1661886586.jpeg"
+                                    alt=" Phạm Hoài Nam ">
+                                <img src="/public/img/vip10.png" class="box__chat--profile__vip" alt="member_vip"
+                                    title="Đại gia">
+                            </div>
+                            <figcaption>
+                                <h6 class="box__chat--nickname vip"> Phạm hoài Nam (LV 4: 27/36)</h6>
+                                <ul class="d-flex box__chat--lists__icon">
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sư</span>
+                                    </li>
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                    </li>
+                                </ul>
+                                <time class="timed__chatting">46 phút trước</time>
+                                <div class="w-100">
+                                    <p class="box__chat--conment vip">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing
+                                        elit.
+                                        At, nemo ratione neque dolor obcaecati inventore laudantium reprehenderit
+                                        eveniet
+                                        cum facere sit repellat eaque voluptas, quo, molestiae non necessitatibus!
+                                        Doloremque, ipsum?
+                                    </p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <div class="box__chat--profile">
+                                <img class="box__chat--image"
+                                    src="https://hhninja.xyz/assets/upload/yb6RY8JhDMrJ6DW1661886586.jpeg"
+                                    alt=" Phạm Hoài Nam ">
+
+                            </div>
+                            <figcaption>
+                                <h6 class="box__chat--nickname"> Phạm hoài Nam (LV 4: 27/36)</h6>
+                                <ul class="d-flex box__chat--lists__icon">
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sư</span>
+                                    </li>
+                                    <li><img class="box__chat--icon"
+                                            src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                            alt="Hồn Sĩ">
+                                        <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                    </li>
+                                </ul>
+                                <time class="timed__chatting">46 phút trước</time>
+                                <div class="w-100">
+                                    <p class="box__chat--conment">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                        elit.
+                                        At, nemo ratione neque dolor obcaecati inventore laudantium reprehenderit
+                                        eveniet
+                                        cum facere sit repellat eaque voluptas, quo, molestiae non necessitatibus!
+                                        Doloremque, ipsum?
+                                        Necessitatibus modi dolore quod incidunt consequuntur ut nulla nemo accusantium
+                                        quasi commodi quas dolorem in ab officiis sint quisquam, id repudiandae eveniet
+                                        consequatur voluptatem. Reiciendis ad dolore harum distinctio maiores.</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="box__container--scrool menu__conment hidden" id="bxh">
+                    <li>
+                        <figure>
+                            <div class="bxh_rank">
+                                <img src="https://www.hhninja.xyz/themes/img/top1.png" alt="top1">
+                                <span>TOP 1</span>
+                            </div>
+                            <figcaption>
+                                <div class="box__container_avata">
+                                    <img class="bxh__avata"
+                                        src="https://hhtq.tv/assets/upload/5EajYupfs2Go7G21656034965.jpeg" alt="top2">
+                                    <figcaption class="bxh__avata--medal">
+                                        <ul class="d-flex box__chat--lists__icon">
+                                            <li><img class="box__chat--icon" src="/public/img/rank.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Vua nạp tiền</span>
+                                            </li>
+                                            <li><img class="box__chat--icon" src="/public/img/vip10.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Đại gia</span>
+                                            </li>
+
+                                        </ul>
+                                    </figcaption>
+                                </div>
+
+                                <div class="bxh__des--profile" style="color:#ffe119">
+                                    <span class="rank-text">Tên: Phạm Hoài Nam</span>
+                                    <span class="rank-text">Lực Chiến: 25,684</span>
+                                    <span class="rank-text">Danh Hiệu: Vua nạp tiền, Vua cày chay</span>
+                                    <span class="rank-text">Cảnh Giới: Hồn Thánh</span>
+                                    <span class="rank-text d-flex">Chiến Tích: <ul
+                                            class="d-flex box__chat--lists__icon">
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sư</span>
+                                            </li>
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                            </li>
+                                            <li><img class="box__chat--icon" src="/public/img/vip9.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Vip 9</span>
+                                            </li>
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <div class="bxh_rank">
+                                <img src="https://www.hhninja.xyz/themes/img/top1.png" alt="top1">
+                                <span>TOP 1</span>
+                            </div>
+                            <figcaption>
+                                <div class="box__container_avata">
+                                    <img class="bxh__avata"
+                                        src="https://hhtq.tv/assets/upload/5EajYupfs2Go7G21656034965.jpeg" alt="top2">
+                                    <figcaption class="bxh__avata--medal">
+                                        <ul class="d-flex box__chat--lists__icon">
+                                            <li><img class="box__chat--icon" src="/public/img/rank.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Vua nạp tiền</span>
+                                            </li>
+                                            <li><img class="box__chat--icon" src="/public/img/vip10.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Đại gia</span>
+                                            </li>
+
+                                        </ul>
+                                    </figcaption>
+                                </div>
+
+                                <div class="bxh__des--profile" style="color:#ffe119">
+                                    <span class="rank-text">Tên: Phạm Hoài Nam</span>
+                                    <span class="rank-text">Lực Chiến: 25,684</span>
+                                    <span class="rank-text">Danh Hiệu: Vua nạp tiền, Vua cày chay</span>
+                                    <span class="rank-text">Cảnh Giới: Hồn Thánh</span>
+                                    <span class="rank-text d-flex">Chiến Tích: <ul
+                                            class="d-flex box__chat--lists__icon">
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sư</span>
+                                            </li>
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                            </li>
+                                            <li><img class="box__chat--icon" src="/public/img/vip9.png" alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Vip 9</span>
+                                            </li>
+                                            <li><img class="box__chat--icon"
+                                                    src="https://hhninja.xyz/assets/upload/d4wZ68LZoJiogfH1663184686.png"
+                                                    alt="Hồn Sĩ">
+                                                <span class="box__chat--icon__des">Hồn Sĩ</span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="box__container--scrool content__rules menu__conment hidden" id="hd">
+                    <h3><strong>1. Lưu ý</strong></h3>
+                    <ol type="a">
+                        <li>Mỗi một bộ phim được xem sẽ tính 2 điểm kinh nghiệm, qua ngày mới (12 giờ đêm) xem lại cùng
+                            bộ phim đó sẽ tính thêm 2 điểm kinh nghiệm.</li>
+                        <li>Mỗi một cấp độ sẽ cần một lượng kinh nghiệm nhất định để đột phá. Mỗi một đại cảnh giới sẽ
+                            có những danh hiệu khác nhau.</li>
+                        <li>Mỗi tài khoản đăng nhập trên một trình duyệt nhất định, nếu đăng nhập tài khoản đó trên
+                            trình duyệt khác sẽ bị đăng xuất trên trình duyệt cũ và ngược lại.</li>
+                        <li>Mỗi tài khoảng nạp ghi rõ mã chuyển khoảng sẽ được lên exp vip</li>
+                    </ol>
+                    <h3> <strong>2. Hê thống cảnh giới</strong> </h3>
+                    <ol type="1">
+                        <li class="" style="color:#fff;">- Lv.1-10 : Hồn Sĩ </li>
+                        <li class="" style="color:#fffff1;">- Lv.11-20 : Hồn Sư</li>
+                        <li class="" style="color:#7c7c64;"> - Lv.21-30 : Đại Hồn Sư</li>
+                        <li class="" style="color:#c9c989;">- Lv.31-40 : Hồn Tôn </li>
+                        <li class="" style="color:#dfdf4d;">- Lv.41-50 : Hồn Tông </li>
+                        <li class="" style="color:#7e7e1c;">- Lv.51-60 : Hồn Vương </li>
+                        <li class="" style="color:#43d64b;">- Lv.61-70 : Hồn Đế </li>
+                        <li class="" style="color:#19b313;"> - Lv.71-80 : Hồn Thánh</li>
+                        <li class="" style="color:#20bb3a;"> - Lv.81-90 : Hồn Đấu La</li>
+                        <li class="" style="color:#575704;"> - Lv.91-94 : Sơ Cấp Phong Hào Đấu La</li>
+                        <li class="" style="color:#0cb3b3;">- Lv.95-98 : Siêu Cấp Phong Hào Đấu La </li>
+                        <li class="" style="color:#1087be;"> - Lv.99 : Cực Hạn Đấu La</li>
+                        <li class="" style="color:#1f218d;"> - Lv.100 : Bán Thần</li>
+                        <li class="" style="color:#96418a;"> - Lv.101-110 : Thần Cấp Sơ Kỳ</li>
+                        <li class="" style="color:#c026ac;"> - Lv.111-120 : Thần Cấp Trung Kỳ</li>
+                        <li class="" style="color:#dd197b;"> - Lv.121-130 : Thần Cấp Hậu Kỳ</li>
+                        <li class="" style="color:#e2b215;">- Lv.131-140 : Thần Vương </li>
+                        <li class="" style="color:#f54b17;">- Lv.141-150 : Tạo Hóa Thần Vương </li>
+                        <li class="" style="color:#cf2f24;">- Lv.151-199 : Thiên Tôn</li>
+                        <li class="" style="color:#f30a0a;">- Lv.200 (max) : Chưởng Khống Giả </li>
+                    </ol>
+                    <h3> <strong>3. Hệ thống vip</strong> </h3>
+                    <ol type="I">
+                        <li style="color:#fff;">- Vip 0 Exp:(0/100)</li>
+                        <li style="color:rgb(197, 115, 170);">- Vip 1 Exp:(100/200)</li>
+                        <li style="color:rgb(158, 37, 108);">- Vip 2 Exp:(200/300)</li>
+                        <li style="color:rgb(247, 14, 169);">- Vip 3 Exp:(300/400)</li>
+                        <li style="color:rgb(125, 90, 223);">- Vip 4 Exp:(400/500)</li>
+                        <li style="color:rgb(39, 28, 187);">- Vip 5 Exp:(500/600)</li>
+                        <li style="color:rgb(29, 14, 248);">- Vip 6 Exp:(600/700)</li>
+                        <li style="color:rgb(123, 185, 51);">- Vip 7 Exp:(700/800)</li>
+                        <li style="color:rgb(211, 208, 39);">- Vip 8 Exp:(800/900)</li>
+                        <li style="color:rgb(161, 29, 29);">- Vip 9 Exp:(900/1000)</li>
+                        <li style="color:rgb(255, 7, 7);">- Vip 10 Exp:(1000)</li>
+                    </ol>
+                    <h3> <strong>4. Hoạt động :</strong> </h3>
+                    <span>- Web sẽ tổ chức thường xuyên một số hoạt động ở phần bình luận, tham gia bình luận sôi nổi sẽ
+                        được thưởng chiến tích và điểm kinh nghiệm để nhanh chóng thăng cấp cảnh giới.</span> <br>
+                    <strong>- Admin sẽ kiểm tra thường xuyên mọi tài khoản vi phạm nội dung ảnh hưởng tới người khác sẽ
+                        bị ban nick vĩnh viễn.</strong>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+  <footer class="mb-0 mt-2">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4 col-12  my-lg-0 my-4">
+
+                    <h6 class="fs-4">THÔNG TIN LIÊN HỆ</h6>
+                    <div class="footer__connect">
+                        <a href="mailto:movibesfilm@gmail.com"><i class="fa-solid fa-envelope"></i>
+                           Email: movibesfilm@gmail.com</a><br>
+                        <a href="tel:+84325024277"><i class="fa-solid fa-phone-volume"></i>Phone: 0325024277</a><br>
+                        <a href="http://"><i class="fa-solid fa-location-pin"></i>Địa chỉ: 200/34 Đường Tô Ký, Đông hưng Thuận,
+                            Quận 12, TP. HCM</a> <br>
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i>
+                            Website : movibes.online</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 px-lg-5 px-2">
+                    <h6 class="text-center fs-4">Ủng hộ Team <img  src="/public/img/logo.png" alt="logo MOVIBES"></h6>
+                    <div class="box__code d-flex justify-content-evenly">
+                        <img src="/public/img/qrfacebook.png" alt="" title="Ủng hộ qua facebook">
+                        <img src="/public/img/qrinsta.png" alt="" title="Ủng hộ qua Insta">
+                        <img src="/public/img/qryoutube.png" alt="" title="Ủng hộ qua Youtube">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <h6 class="fs-4 text-center">Theo dõi chúng tôi</h6>
+                      <div class="fb-page w-100 text-center" data-href="https://www.facebook.com/profile.php?id=100087004991368" data-tabs="timeline" data-width="" data-height="80" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100087004991368" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100087004991368">Movibes Group</a></blockquote></div>
+                    
+                </div>
+            </div>
+        </div>
+        <section class="m-0 mt-2 text-center copyright">Bản quyền © thuộc về <strong>MOVIBES</strong> </section>
+    </footer>
+
+</body>
+
+<script src="/assets/js/api.js" type="text/javascript"></script>
+<script>
+    let $$ = document.querySelector.bind(document);
+    let $$l = document.querySelectorAll.bind(document);
+</script>
+<script src="/assets/js/style.js" type="text/javascript"></script>
+<script src="/assets/js/filmdetail.js" type="text/javascript"></script>
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+
+<script>
+    var myFP = fluidPlayer("video", {
+        layoutControls: {
+            controlBar: {
+                autoHideTimeout: 3,
+                animated: true,
+                autoHide: true,
+            },
+            htmlOnPauseBlock: {
+                html: null,
+                height: null,
+                width: null,
+            },
+            autoPlay: false,
+            mute: true,
+            allowTheatre: true,
+            playPauseAnimation: true,
+            playbackRateEnabled: true,
+            allowDownload: true,
+            playButtonShowing: true,
+            fillToContainer: false,
+            posterImage: "poster.jpg",
+        },
+        vastOptions: {
+            adList: [],
+            adCTAText: false,
+            adCTATextPosition: "",
+        },
+    });
+    let video = $$('#video');
+    videoEditStyle();
+    // javscript cho phim video
+    let is_light = true;
+    function videoEditStyle() {
+        if (video) {
+            let light = $$('#toggle-light');
+            light.innerHTML = '<img width="20" height="20" src="/public/img/lightoff.png" alt="lightoff"> Bật đèn';
+            light.onclick = function () {
+                $$('.modal__overlay').classList.toggle('hidden');
+                is_light = !is_light;
+                if (is_light) {
+                    light.innerHTML = '<img width="20" height="20" src="/public/img/lightoff.png" alt="lightoff"> Bật đèn';
+                }
+                else {
+                    light.innerHTML = '<img width="20" height="20" src="/public/img/lighton.png" alt="lighton"> Tắt đèn';
+                }
+            }
+        };
+    };
+    console.log($$('#notice_errors'))
+    $$('#notice_errors').onclick=function(){
+    setTimeout(()=>{
+        creat_toast('notice','Cảm ơn bạn đã báo cáo!','Chúng tôi sẽ sửa lại sau mong bạn có trả nghiệm vui vẻ bên <code>MOBIVES</code> !');
+    },200)
+  
+    }
+   
+       // tạo toast   
+function creat_toast(nametoast, title, message) {
+    $$('#toast').classList.remove('hidden');
+    $$('.modal_content-head h1').innerText = title;
+    $$('#toast .toast__img').setAttribute('src',arr__toast[nametoast]);
+    $$('#toast .modal_content-des').innerHTML = message;
+    $$('.modal_content').onclick=e=>{
+        e.stopPropagation();
+    }
+    document.onclick=()=>{
+        closeToast();
+    }
+}
+//end
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <title>Loading - Movies</title>
+</head>
+<style>
+    .loading{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #191919;
+        display: flex;
+    }
+    .loading__image{
+        margin: auto;
+    }
+    .loading__logo--style{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        animation: rotateStyle 4s infinite;
+    }
+    .loading__brand--style{
+        visibility: hidden;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        animation:  HappenImage 4s infinite;
+        animation-delay: .3s;
+    }
+    @keyframes rotateStyle {
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(360deg);
+        }
+        100%{
+            transform: rotate(0deg);
+            
+        }
+    }
+    @keyframes HappenImage {
+        0%{
+          visibility: visible;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+        100%{
+         
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+</style>
+<body>
+    <div class="loading">
+        <div class="loading__image">
+            <img class="loading__logo--style" src="/public/img/loading.png" alt=""><img class="loading__brand--style" src="/public/img/logo.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

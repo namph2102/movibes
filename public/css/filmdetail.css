@@ -1,0 +1,347 @@
+.content__website main .movie-poster .movie-content .movie__box-btn button, .content__website main .movie-imformation .movie-newesp {
+  padding: 4px 8px;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(-30deg, #f44336, #789600c9);
+}
+
+.content__website main .movie-imformation .movie-lastEps a {
+  background-image: -webkit-gradient(linear, right top, left top, from(#2196f3), to(#3f51b5));
+  padding: 3px 10px 4px;
+  border-radius: 3px;
+  -webkit-transition: .6s all;
+  transition: .6s all;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 4px 12px;
+}
+
+.content__website main .movie-detail__film h2 {
+  font-size: 15px;
+  padding: 10px 0;
+  color: #ffc107;
+  font-weight: 700;
+}
+
+.content__website main {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.content__website main .movie-poster .movie-content {
+  position: relative;
+}
+
+.content__website main .movie-poster .movie-content .movie__box-btn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 250px;
+  bottom: 4px;
+}
+
+.content__website main .movie-poster .movie-content .movie__box-btn button {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #9faf00, #ff5000);
+  padding: 10px 16px;
+  font-size: 14px;
+}
+.content__website main .movie-poster .movie-content .movie__box-btn button:first-child {
+  background-image: linear-gradient(to right, #009245,  #a97e00);
+}
+.content__website main .movie-poster .movie-content .movie__box-btn button a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.content__website main .movie-poster .movie-content .movie__box-btn button:hover {
+  opacity: 0.9;
+}
+
+.content__website main .movie-poster .movie-thumb {
+  width: 250px;
+  border-radius: 4px;
+  height: 350px;
+  -webkit-box-shadow: 1px 2px 4px gray;
+          box-shadow: 1px 2px 4px gray;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content__website main .movie-poster .movie-bookmark {
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: rotate_bookmark ease 1s infinite;
+          animation: rotate_bookmark ease 1s infinite;
+}
+
+.content__website main .movie-poster .movie-bookmark:hover ~ .movie-bookmark__des {
+  display: block;
+}
+
+.content__website main .movie-imformation {
+  font-size: 15px;
+}
+
+.content__website main .movie-imformation p {
+  margin: 12px 0;
+  padding: 0;
+}
+
+.content__website main .movie-imformation span {
+  color: #8686bd;
+}
+
+.content__website main .movie-imformation a:hover {
+  opacity: 0.6;
+}
+
+.content__website main .movie-imformation .movie-title {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.content__website main .movie-imformation .movie-sologan {
+  font-size: 14px;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.content__website main .movie-imformation .movie-released i {
+  padding-right: 4px;
+}
+
+.content__website main .movie-imformation .movie-released span {
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+.content__website main .movie-imformation .movie-newesp {
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.content__website main .movie-imformation .movie-lastEps a {
+  margin-right: 4px;
+}
+
+.content__website main .movie-imformation .movie-category span {
+  letter-spacing: 1.4px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.content__website main .movie-imformation .movie-ratings {
+  position: relative;
+}
+
+.content__website main .movie-imformation .movie-ratings .main_stars:hover ~ .movie-bookmark__des {
+  display: block;
+}
+
+.content__website main .movie-imformation .movie-ratings .movie-bookmark__des {
+  opacity: 1 !important;
+  z-index: 2;
+  color: white;
+  background-color: #ee4949;
+}
+
+.content__website main .movie-imformation .movie-ratings .movie-bookmark__des::after {
+  border-color: transparent #ee4949 transparent transparent;
+}
+
+.content__website main .movie-imformation .movie-ratings span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content__website main .movie-imformation .movie-ratings img {
+  cursor: pointer;
+}
+
+.content__website main .movie-search__box .filter-episode input {
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 8px 12px;
+}
+
+.content__website main .movie-search__box .filter-episode .search_episode-list {
+  position: relative;
+  min-height: 20px;
+}
+
+.content__website main .movie-search__box .filter-episode .search_episode-list a {
+  display: inline-block;
+  padding: 6px 12px;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 8px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #212266;
+}
+
+.content__website main .movie-search__box .filter-episode .search_episode-list a:hover {
+  opacity: 0.8;
+}
+
+.content__website main .halim--notice figure {
+  background-color: #224361;
+  padding: 12px 4px;
+  border-radius: 8px;
+}
+
+.content__website main .movie-detail__film {
+  opacity: 0.8;
+  position: relative;
+}
+
+.content__website main .movie-detail__film h2 {
+  font-size: 16px;
+  border-bottom: 2px solid #ee4949;
+}
+
+.content__website main .movie-detail__film h3 {
+  font-size: 15px;
+}
+
+.content__website main .movie-detail__film p,
+.content__website main .movie-detail__film li {
+  font-size: 14px;
+}
+
+.content__website main .movie-detail__film .movie-detail__film--container {
+  overflow-y: scroll;
+    height: 100px;
+}
+
+.content__website main .movie-detail__film .movie-detail__film--container::-webkit-scrollbar {
+  width: 0;
+}
+
+.content__website main .movie-detail__film .movie-detail__film--container .tag__seo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  opacity: 0.6;
+  font-weight: 200;
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin: 1px;
+  display: inline-block;
+  background-color: #2e2e30;
+}
+
+.content__website main .movie-detail__film .item-content-gradient {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 26px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 24, 33, 0.28)), to(#151a20));
+  background: linear-gradient(to bottom, rgba(16, 24, 33, 0.28) 0%, #151a20 100%);
+}
+
+.content__website main .movie-detail__film #idcheckbox:checked ~ .movie-detail__film--container {
+  height: auto;
+}
+
+.content__website main .movie-detail__film .movie-detail__tagSeo {
+  height: 50px;
+}
+
+.content__website main .movie-detail__film #idcheckboxseo:checked ~ .movie-detail__film--container {
+  height: auto;
+}
+
+.content__website main .idcheckbox:hover,
+.content__website main .idcheckboxseo:hover {
+  color: #d6e415 !important;
+}
+
+.movie-bookmark__des {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 63px;
+  background-color: #095a80;
+  padding: 0 8px;
+}
+.movie-bookmark__des::after {
+  content: "";
+  position: absolute;
+  font-size: 10px;
+  top: 1px;
+  left: -26px;
+  margin: auto;
+  border: 13px solid;
+  border-color: transparent #0c4d61 transparent transparent;
+}
+
+@-webkit-keyframes rotate_bookmark {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes rotate_bookmark {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+#fluid_video_wrapper_video {
+  width: 100% !important;
+  height: 100% !important;
+  
+}
+/*# sourceMappingURL=filmdetail.css.map */

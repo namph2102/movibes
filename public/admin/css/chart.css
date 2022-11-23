@@ -1,0 +1,101 @@
+#header_chart{
+    color: white;
+    font-size: 17px;
+}
+.chart_head-list-box_view{
+    width: 25%;
+    background-color: var(  --head-bg);
+    padding: 16px;
+  
+}
+.header_chart-head{
+    line-height: 80px;
+}
+.chart_head-list{
+    margin-bottom: 32px;
+}
+.chart_head-list-box_view+.chart_head-list-box_view{
+    border-left: 4px solid rgb(189, 185, 185);
+    border-radius: 4px;
+}
+.chart_head-list-box{
+    display: flex;
+    
+   
+}
+.chart_head-list-box_view h2{
+    font-family: sans-serif;
+}
+.chart_head-list-box_view h5{
+    display: flex;
+    justify-content: space-between;
+}
+.chart_head-list-box_view .chart_head-pernumber{
+    color: #1E8F55;
+    font-size: 18px;
+}
+.chart_head-list-box_view .chart_head-pernumber i{
+    font-size: 16px;
+    margin-right: 4px;
+}
+.chart_head-list-box_view h5{
+    line-height: 40px;
+}
+.weather_title{
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: left;
+}
+.chart_content{
+    display: flex;
+    justify-content: space-between;
+}
+.chart_content-box{
+    width: 30%;
+    background-color: #2B283E;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+}
+.header_chart-head h2{
+
+}
+.header_chart-head_body{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    
+    text-align: center;
+    animation: borderAnime 2s linear infinite;
+}
+@keyframes borderAnime {
+    0%{
+        border-top: 10px solid #da2525;
+    }
+   
+    50%{
+        border-right: 10px solid #c95c03;
+    }
+    75%{
+        border-bottom: 10px solid #dd2140;
+    }
+    100%{
+        border-left: 10px solid #91da1b;
+    }
+}
+.header_chart-head_footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.head_footer-box{
+
+}
