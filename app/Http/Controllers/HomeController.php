@@ -219,6 +219,7 @@ class HomeController extends Controller
                 return response(['star' => 5, 'total' => $total,'count'=>$countStar]);
             }
         }
+        
         $star = $request->star;
         if ($check) {
             DB::table("stars")->where('ip', $ip)->where('id_film', $id_fiml)->where('id_esopide', $id_esopide)->update(['star' => $star]);

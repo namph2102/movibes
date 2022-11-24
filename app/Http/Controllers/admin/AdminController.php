@@ -83,6 +83,7 @@ class AdminController extends Controller
             $dbuser = DB::table("users")->where('phone', $request->phone)->get();
             $check = true;
         }
+        
         if ($request->permission) {
             $dbuser = DB::table("users")->where('permission', $request->permission)->get();
             $check = true;

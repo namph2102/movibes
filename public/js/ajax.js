@@ -80,24 +80,25 @@ $(document).ready(function () {
     });
 
     let arr = [];
+
     var idFilm = $("#binhluanID").val();
     idFilm = (!idFilm) ? 0 : idFilm;
     $.get("/api/binh-luan-all", { id: idFilm }, function (res) {
         let _html = '';
         let subIcon = '';
-      
+
         if (res.status_code == 200) {
             arr = res;
             let comments = res.data;
-            
             let title = "Web phim hoạt hình Trung Quốc VietSub";
             comments.forEach(item => {
-                let Danhhieu='';
-                let icon_subAvata='';
-              
+                let Danhhieu = '';
+                let icon_subAvata = '';
+                subIcon='';
                 if ((item.listIcons).length > 0) {
                     subIcon = '';
                     item.listIcons.forEach(icon => {
+
                         subIcon += ` <li><img class="box__chat--icon"
                      src="${icon.link}"
                      alt="${icon.name_icon}">
@@ -105,7 +106,7 @@ $(document).ready(function () {
              </li>`
                     })
                 }
-             
+
                 if (item.listHC.length >= 1) {
                     item.listHC.forEach(hc => {
                         icon_subAvata += `<li><img class="box__chat--icon" src="${hc.link}" alt="${hc.name_icon}">
@@ -113,7 +114,6 @@ $(document).ready(function () {
                 </li>`;
                     })
                 }
-                  
                 _html += `  
                   <li>
                     <figure alt="${item.permission.toUpperCase()}">
@@ -161,11 +161,11 @@ $(document).ready(function () {
             let icon_subAvata = '';
             let _html = '';
             let topUser = '';
-            if(!userid) {
-                message=`<p class="col-12 text-center fs-5 text-danger"><a href="dang-ky.html">Đăng ký ngay
+            if (!userid) {
+                message = `<p class="col-12 text-center fs-5 text-danger"><a href="dang-ky.html">Đăng ký ngay
                 </a> để thăng hạng nào </p>`;
             }
-           
+
             data.forEach(user => {
                 let Danhhieu = '';
                 let chientich = '';
@@ -174,6 +174,7 @@ $(document).ready(function () {
                     i++;
                     top = user.BXH['name_icon'].replace('6', i);
                 }
+
                 if (user.listHC.length >= 1) {
                     user.listHC.forEach(hc => {
                         Danhhieu += hc.name_icon;
@@ -183,7 +184,7 @@ $(document).ready(function () {
                     })
                 }
                 if (user.listIcons.length >= 1) {
-                 
+                    chientich='';
                     user.listIcons.forEach(icon => {
                         chientich += `<li><img class="box__chat--icon"
                         src="${icon.link}"
@@ -191,8 +192,8 @@ $(document).ready(function () {
                     <span class="box__chat--icon__des">${icon.name_icon}</span>
                 </li>`;
                     })
-
                 }
+
                 if (Number(user.id) == Number(userid)) {
                     topUser = `<li>
                     <figure>
@@ -204,8 +205,8 @@ $(document).ready(function () {
                             <div class="box__container_avata">
                                 <img class="bxh__avata"
                                     src="${user.avata}" />
-                                    ${(user.vip_icon.link)?` <img class="bxh__avata-IconVip" title="${user.vip_icon.name_icon}"
-                                    src="${user.vip_icon.link}" />`:""}
+                                    ${(user.vip_icon.link) ? ` <img class="bxh__avata-IconVip" title="${user.vip_icon.name_icon}"
+                                    src="${user.vip_icon.link}" />` : ""}
                                 <figcaption class="bxh__avata--medal">
                                     <ul class="d-flex box__chat--lists__icon">
                                     ${icon_subAvata}
@@ -241,8 +242,8 @@ $(document).ready(function () {
                         <div class="box__container_avata">
                             <img class="bxh__avata"
                                 src="${user.avata}">
-                                ${(user.vip_icon.link)?` <img class="bxh__avata-IconVip" title="${user.vip_icon.name_icon}"
-                                src="${user.vip_icon.link}" alt="top2">`:""}
+                                ${(user.vip_icon.link) ? ` <img class="bxh__avata-IconVip" title="${user.vip_icon.name_icon}"
+                                src="${user.vip_icon.link}" alt="top2">` : ""}
                             <figcaption class="bxh__avata--medal">
                                 <ul class="d-flex box__chat--lists__icon">
                                 ${icon_subAvata}
@@ -265,12 +266,13 @@ $(document).ready(function () {
                     </figcaption>
                 </figure>
             </li>`;
+        
             });
             $("#bxh").prepend(_html);
         }
     })
     var userid = $("#UserID").val();
-    if(userid){
+    if (userid) {
         render__bookmark();
     }
     $("#btn_Binhluan").click(function () {
@@ -300,7 +302,7 @@ $(document).ready(function () {
                      <span class="box__chat--icon__des">${icon.name_icon}</span>
                  </li>`
                             })
-        
+
                             let _html = `
                         <li>
                         <figure alt="${data.permission}" title="${data.permission}">
@@ -328,9 +330,9 @@ $(document).ready(function () {
                             </figcaption>
                         </figure>
                     </li>
-                      `; 
-                  
-                      $("#binhluan").prepend(_html);
+                      `;
+
+                            $("#binhluan").prepend(_html);
                         }
                     });
                 }
@@ -339,9 +341,9 @@ $(document).ready(function () {
 
     });
     var userid = $("#UserID").val();
-    if(!userid) {
-        userid=1;
-        message=`<p class="col-12 text-center fs-5 text-danger"><a href="/dang-ky.html">Đăng ký ngay
+    if (!userid) {
+        userid = 1;
+        message = `<p class="col-12 text-center fs-5 text-danger"><a href="/dang-ky.html">Đăng ký ngay
         </a> để thăng hạng nào </p>`;
     }
     $.ajax({
@@ -349,7 +351,7 @@ $(document).ready(function () {
         type: 'GET',
         data: { id: userid },
         success: function (res) {
-            if ($("#tuvi")) {      
+            if ($("#tuvi")) {
                 $("#tuvi").html(`<code class="fs-6 text-warning"> Cảnh giới "${res.EXp}"</code>`);
             }
         }
@@ -365,15 +367,15 @@ $(document).ready(function () {
         let fimldeltail = $("#movie-imfomation");
         let name = fimldeltail.attr('alt');
         let img = fimldeltail.attr('src');
-        modal__notice(`Thêm thành công bookmark phim: "<code>${name}</code>"` );
-        
+        modal__notice(`Thêm thành công bookmark phim: "<code>${name}</code>"`);
+
         $.ajax({
             url: "/handle-book-mark.html",
             type: 'GET',
             data: { action: "add", idFilm: idFilm, userid: userid, name: name, img: img },
             success: function (res) {
                 if (res) {
-                    render__bookmark() 
+                    render__bookmark()
                 }
             }
         });
@@ -391,7 +393,7 @@ $(document).ready(function () {
             type: 'GET',
             data: { action: "delete", idFilm: idFilm, userid: userid },
             success: function (res) {
-                render__bookmark() 
+                render__bookmark()
             }
         });
     });
@@ -406,9 +408,9 @@ function render__bookmark() {
     let html = '';
     $.get("/handle-book-mark.html", { action: "show", userid: userid }, function (data) {
         if (data) {
-            localStorage.setItem("borkmarks",JSON.stringify(data))
+            localStorage.setItem("borkmarks", JSON.stringify(data))
             data.forEach((item, index) => {
-                if(item.id==idFilm){
+                if (item.id == idFilm) {
                     $("#addbookmark").addClass("hidden");
                     $("#removebookmark").removeClass("hidden");
                 }
@@ -422,10 +424,10 @@ function render__bookmark() {
         <button onclick="myfunction(${item.id},this)" class="btn btn-danger rounded-circle">X</button>
     </figure>`;
             })
-          
-            if(!html){
-                html=`<p>Chưa có phim nào được <code>Bookmarks</code></p>`
-              
+
+            if (!html) {
+                html = `<p>Chưa có phim nào được <code>Bookmarks</code></p>`
+
             }
             $("#bookmark__boxfilm").html(html)
             $("#profile__notice-number").html(lenght_book);
@@ -436,33 +438,31 @@ function render__bookmark() {
     return html;
 }
 
-function myfunction(id){
-    data= JSON.parse(localStorage.getItem('movibes__bookmarks'));
-    let bookmark__boxfilm_avata=Array.from(document.querySelectorAll('.bookmark__boxfilm_avata'));
-    let indexs=0;
-    data.find((item,index)=>{
+function myfunction(id) {
+    data = JSON.parse(localStorage.getItem('movibes__bookmarks'));
+    let bookmark__boxfilm_avata = Array.from(document.querySelectorAll('.bookmark__boxfilm_avata'));
+    let indexs = 0;
+    data.find((item, index) => {
         indexs++;
-        return  item.id==id && index;
+        return item.id == id && index;
     })
     loadding__logo('.bookmarks__loadding', 1000);
-    setTimeout(()=>{
-        bookmark__boxfilm_avata.forEach((item)=>{
-            if (item.getAttribute("data-id")==id){
+    setTimeout(() => {
+        bookmark__boxfilm_avata.forEach((item) => {
+            if (item.getAttribute("data-id") == id) {
                 item.classList.add('hidden');
-                $(document).ready(function(){
+                $(document).ready(function () {
                     var userid = $("#UserID").val();
                     $.ajax({
                         url: "/handle-book-mark.html",
                         type: 'GET',
                         data: { action: "delete", idFilm: id, userid: userid },
                         success: function (res) {
-                            render__bookmark() 
+                            render__bookmark()
                         }
                     });
                 })
-               }
+            }
         })
-    },1000)
-
-   
+    }, 1000)
 }

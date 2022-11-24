@@ -73,7 +73,7 @@ class ApiController extends Controller
 
         $topuser = 0;
         $leneExp = DB::table('exps')->orderByDesc('max_lv')->get();
-        
+  
         foreach ($dbBL as $user) {
             if ($id == 'all') {
                 if ($topuser >= 5)  $topuser = 5;
@@ -101,7 +101,6 @@ class ApiController extends Controller
             $arrHC = [];
             $vipicon = [];
             $letTrue = true;
-     
             foreach ($dbicon  as $icon) {
                 if ($user->id == $icon->id_user) {
                     if ($icon->Level == 3) {
@@ -123,7 +122,7 @@ class ApiController extends Controller
             $user->vip_icon = $vipicon;
             $user->listHC = $arrHC;
         }
-
+     
         if ($dbBL) {
             return response([
                 'data' => $dbBL,
@@ -162,6 +161,7 @@ class ApiController extends Controller
         }
         $arr = [];
         $vipicon = '';
+
         foreach ($dbicon  as $icon) {
             if ($icon->Level == 3) {
                 $vipicon = $icon;

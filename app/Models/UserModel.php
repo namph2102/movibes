@@ -58,6 +58,7 @@ class UserModel extends Model
         return  $dbbooks;
     }
 
+    
     public function updatebookmark($iduser,$list){
         DB::table('bookmarks')->where('id_user', $iduser)->delete();
         foreach($list as $item){

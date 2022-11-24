@@ -108,8 +108,8 @@
                         Chiến tích:
                     </label>
                     <ul class="profile__trophy ps-2" style="min-height: 20px;">
-                        {{var_dump($account->listicon)}}
-                        @if (!empty($account->listicon->name_icon))
+                 
+                        @if (!empty($account->listicon[0]->name_icon))
                          @foreach ($account->listicon as $icon)
                             <li><img src="{{$icon->link}}" alt="{{$icon->name_icon}}">
                               <span class="profile__trophy-des">{{$icon->name_icon}}</span>

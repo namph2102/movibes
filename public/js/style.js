@@ -338,7 +338,6 @@ function render_film_container(api, day = '', len = 12) {
 
 
     html = api.map(function (item, index) {
-        console.log(item)
         hidden = (item.openDay[0].includes(Number(day)) > 0 && (item.episode<item.totalepisode)) ? '' : 'hidden';
         if (!day) hidden = '';
         if (!hidden) dem++;
