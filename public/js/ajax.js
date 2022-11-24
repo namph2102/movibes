@@ -25,11 +25,11 @@ $(document).ready(function () {
                 if (data) {
                     $("#dbusernameMessage").empty();
                     $("#dbusernameMessage").css("color", "#f44336")
-                    $("#dbusernameMessage").append("Tài khoảng " + value + " không tồn tại !");
+                    $("#dbusernameMessage").append("Tài khoản " + value + " không tồn tại !");
                 }
                 else {
                     $("#dbusernameMessage").empty();
-                    $("#dbusernameMessage").append("Tài khoảng " + value + " hợp lệ!");
+                    $("#dbusernameMessage").append("Tài khoản " + value + " hợp lệ!");
                     $("#dbusernameMessage").css("color", "#ff9800");
                 }
             }

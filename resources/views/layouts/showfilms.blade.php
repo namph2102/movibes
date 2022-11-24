@@ -88,31 +88,13 @@
             </div>
 
             <div class="container__film--menu my-2">
-                <!-- Loading film -->
-                <div class="loading__film loading__film_fullday hidden" style="min-height: 400px;">
-                    <div class="box__loadding hidden"></div>
-                    <div class="box__loadding active"></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                    <div class="box__loadding "></div>
-                </div>
-                <!--  end Loading film -->
-                <div class="row container__film--list__menu col-12">
-                    <!-- show list fiml here -->
-                   
-                </div>
-                <!-- Phân trang  -->
-                <div class="panation" id="panation">
-                    <ul>
-                   
-                    </ul>
-                </div>
+                <div class="row container__film--list__menu col-12 demo1">
+
+                </div>   
+
+                <div id="pagination-demo1" style="display: flex;justify-content: space-around;" class="mt-2">
+
+                  </div>
             </div>
         </main>
         
@@ -230,46 +212,75 @@
 </section>
 @endsection
 
+
+
 @section('js')
+<script src="{{asset("css/paginationjs/src/pagination.js")}}"></script>
 <script>
-      fc_loadingfilm('.loading__film_fullday',2400);
-    function removeActive(index){
-        let panation=$$l("#panation ul li a");
-        Array.from(panation).forEach(element => {
-            element.classList.remove('active')
-        });
-        if(panation[index]){
-            panation[index].classList.add('active');
-        }
-    }
-    localStorage.setItem('pageShowfilm', 0);
-     
-    $.get("/api/get-all-film",{amout:"all"},function(res){
-        let len=16;
-        render_film_container(res.data,'',len);
+let url=location.href;
+ $.get(url,{action:"getvalue"},function(data){
+        rendernotice(data);
+         return false;
     })
-    function handPanation(page,e){
-        console.log(page)
-        localStorage.setItem('pageShowfilm',page)
-        $.get("/api/get-all-film",{amout:"all",page:page},function(res){
-            render_film_container(res.data,'',16);
-            localStorage.setItem('total_page',Math.floor(res.data.length/16)+1);
-        })
+   
+    function checkkind(kind){
+        switch (Number(kind)){
+     
+     case 1: return `3D`;
+     case 2: return `2D`;
+     case 3: return `VIETSUB `;
+     case 4: return `Thuyết Minh`;
+     case 5: return `Lồng Tiếng`;
+ }
+ return  'VIETSUB';
     }
-    function changePanation(value){
-        let page=  localStorage.getItem('pageShowfilm');
-        page=Number(value);
-        if(page<=0) page=0;
-        if(page>=localStorage.getItem('total_page')) page=localStorage.getItem('total_page');
-        handPanation(page);
-    }
-    render_pagePanation()
-    function render_pagePanation(){
-        let panation=$$("#panation ul");
-        let html=` <li  onclick="changePanation(-1)"><a href="#showall">PREV</a></li>
-            <li><a onclick="changePanation(1)" href="#showall">	NEXT</a></li>`;
-        panation.innerHTML=html;
-       
-    }
+function rendernotice(data) {
+  (function(name) {
+    var container = $('#pagination-' + name);
+    var sources = function () {
+      var result = [];
+        data.forEach(item =>{
+        result.push(`<div class="box__film--item col-md-4 col-xl-3 col-6" title="Xem phim ${item.name}">
+        <a href="thong-tin-chi-tiet/${item.name_slug}/${makeid(6)}${item.id_film}.html" class="box__avata--item" title="${item.name}">
+            <img src="${item.thumb_url}"
+                alt="${item.name}">
+               
+        </a>
+        <div class="box__film--episode">
+            ${render__kind(item.status,item.episode_current,item.episode)}
+        </div>
+        <div class="box__film--kind">
+        <span class="px-2"> ${checkkind(item.theloaiphim)} </span>
+        </div>
+        <div class="box__film--title">
+            <h4 class="m-0 fs-6">${item.name}</h4>
+            <p class="m-0">${item.origin_name}</p>
+        </div>
+        <a  href="/thong-tin-chi-tiet/${item.name_slug}/${makeid(6)}${item.id_film}.html" class="item__overplay">
+        </a>
+    </div>`);
+      })
+
+      return result;
+    }();
+
+    var options = {
+      dataSource: sources,
+      pageSize: 16,
+      callback: function (response, pagination) {
+        dataHtml="";
+        $.each(response, function (index, item) {
+          dataHtml +=  item ;
+        });
+        container.prev().html(dataHtml);
+      }
+    };
+    container.pagination(options);
+
+    
+  })('demo1');
+};
+
+
 </script>
 @endsection

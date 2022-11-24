@@ -23,6 +23,7 @@ Route::get('get-binh-luan-user', [ApiController::class,'getUserConment'])->name(
 Route::get('get-bang-xep-hang-user', [ApiController::class,'getRankUser'])->name('binhluan.bxh');
 
 Route::get('country-all', [ApiController::class,'getcountry'])->name('country');
+Route::get('catelogy-all', [ApiController::class,'getcatelogy'])->name('catelogy');
 
 // lấy tất cả danh sách phim
 Route::get('get-all-film', [ApiController::class,'getListFilmAll'])->name('film.getall');

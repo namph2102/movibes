@@ -852,4 +852,10 @@ $.get("/api/country-all",{},function(data){
     })
    $("#country").html(html);
 })
-// contryu
+ $.get("/api/catelogy-all",{},function(data){
+    let html='';
+    data.forEach(cate=>{
+        html+=`<li><a href="/theloai/${removeVietnameseTones(cate.name_cate)}/id-${cate.id_cate}.html">${cate.name_cate}</a></li>`
+    })
+   $("#catelogy").html(html);
+})

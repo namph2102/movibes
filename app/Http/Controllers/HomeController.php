@@ -60,6 +60,11 @@ class HomeController extends Controller
 
         $dbusers = new UserModel();
         $users = $dbusers->getAllifmUser();
+ 
+        if($request->action){
+            $dbfiml=DB::table("film")->get();
+            return response($dbfiml);
+        }
         return view('layouts.showfilms', compact('users'));
         
     }
@@ -133,6 +138,20 @@ class HomeController extends Controller
             return response($dbfiml);
         }
         return view('layouts.showfilmkind', compact('users','dbfiml','title','direct'));
+    }
+    public function gettheloai(Request $request, $slug, $id)
+    {
+        $dbusers = new UserModel();
+        $users = $dbusers->getAllifmUser();
+        $dbfiml = DB::table("film")->where('category', 'like', "%$id%")->get();
+        $dbcate = DB::table("category")->where("id_cate", $id)->first();
+        $name = $dbcate->name_cate;
+        $title = "Phim hay tuyển chọn theo thể loại  $name tại PHIMLE.VIP";
+        $direct = "Danh Sách thể loại phim $name";
+        if ($request->action) {
+            return response($dbfiml);
+        }
+        return view('layouts.showfilmkind', compact('users', 'dbfiml', 'title', 'direct'));
     }
     // end hiển thị phim theo slug
     public function detail()

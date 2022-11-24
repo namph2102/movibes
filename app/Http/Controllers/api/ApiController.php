@@ -249,4 +249,8 @@ class ApiController extends Controller
         $dbcontry=DB::table("quocgia")->get();
         return response($dbcontry);
     }
+    public function getcatelogy(){
+        $category=DB::table("category")->get();
+        return response($category);
+    }
 }

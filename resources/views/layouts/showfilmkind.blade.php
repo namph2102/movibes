@@ -27,13 +27,6 @@
     <div class="row">
         
         <main class="col-lg-8 col-12">
-                <!-- Loading showkind -->
-                <div class="showkind_loadding" style="position: relative">
-                    <div class="loading__image">
-                        <img class="loading__logo--style" src="{{asset('img/loading.png')}}" alt="">
-                    </div>
-                </div>
-                <!--End Loading showkind -->
 
             <h5 class="d-inline-block direction-title">{{$direct}}</h5>
             <div class="container__film--menu my-2">
@@ -198,8 +191,6 @@ function addhref(){
     })
 
 }
-setTimeout(() => {
-$$('.showkind_loadding').classList.add('hidden');
-}, 1000);
+
 </script>
 @endsection

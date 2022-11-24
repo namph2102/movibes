@@ -26,6 +26,7 @@ Route::get('/', [HomeController::class,'home'])->name('film.home');
 Route::get('/home.html', [HomeController::class,'home'])->name('movibes');
 
 Route::get('country/{slug?}.html', [HomeController::class,'getcountry'])->name('country');
+Route::get('theloai/{slug?}/id-{id?}.html', [HomeController::class,'gettheloai'])->name('theloai');
 
 Route::get('xem-phim-{slug?}+tap-{episode?}+id-{id?}.html', [HomeController::class,'playfilm'])->name('film.play');
 Route::get('get-phim.html', [HomeController::class,'getesopide'])->name('film.get');

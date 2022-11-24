@@ -42,6 +42,15 @@
    {{-- ENDV SEO  --}}
         @yield('meta')
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1D3SLFXFJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B1D3SLFXFJ');
+</script>
 <script src="{{asset('js/ajax.js')}}"></script>
 <?php  if(isset($_COOKIE["userLoading"]))
 {
@@ -147,7 +156,9 @@
                                     Đăng Ký</a></li>
                                     <li onclick="openElement(this,'#profile_changepasswork')"><a  href="javascript:void(0)"><i class="fa-solid fa-ellipsis"></i> Đổi mật khẩu</a></li>
                                     <li><a  href="javascript:void(0)" id="logoutForm"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>
-                                    <li><a href="{{route('admin.dashboard')}}"><i class="fa-brands fa-vaadin"></i> Quản Trị Website</a></li>
+                                 @if($users->permission=="admin")
+                                 <li><a href="{{route('admin.dashboard')}}"><i class="fa-brands fa-vaadin"></i> Quản Trị Website</a></li>
+                                 @endif
                                     @else 
                                     <li onclick="openElement(this,'#form__login')"><a><i class="fa-solid fa-right-from-bracket"></i> 
                                         Đăng nhập</a></li>
@@ -182,11 +193,19 @@
                        
                     </ul>
                 </li>
-                <li class="menu__navFist nav__kind menu__parent_drop"><a href="javascript:void(0)">Quốc gia <i class="fa-solid fa-caret-down"></i> </a>
+                <li class="menu__navFist nav__kind menu__parent_drop hidden"><a href="javascript:void(0)">Quốc gia <i class="fa-solid fa-caret-down"></i> </a>
                     <!-- Danh sách Thể loại phim -->
                     <ul class="menudrop" id="country">
                     </ul>
                 </li>
+
+                <li class="menu__navFist nav__kind menu__parent_drop "><a href="javascript:void(0)">Thể loại <i class="fa-solid fa-caret-down"></i> </a>
+                        <!-- Danh sách Thể loại phim -->
+                        <ul class="menudrop" id="catelogy">
+                     
+                        </ul>
+                </li>
+
                 <li><a href="/xem-phim-le.html"><i class="fa-solid fa-film"></i> Phim lẻ </a></li>
                 <li><a href="/xem-phim-dang-chieu.html"><i class="fa-solid fa-repeat"></i> Phim đang chiếu </a></li>
                 <li class="menu__navFist nav__calendar"><a href="javascript:void(0)">Lịch chiếu phim <i
@@ -211,19 +230,6 @@
     </header>
     <!-- Modal -->
 
-    <style>
-        @media (max-width:1000px){
-            .banner__quangcao{
-                width: 100%;
-            }
-        }
-    </style>
-    <div class="advert container text-center {{empty($users->id)?"":"hidden"}}">
-        <marquee class="text-white fs-6" behavior="" direction=""><a class="text-danger" href="{{route("form.regester")}}"><code>Đăng ký ngay</code></a> để ẩn quảng cáo bạn nhé !</marquee>
-        <a class="" href="{{route("form.regester")}}">
-            <img class="w-60 banner__quangcao" src="https://www.movie678.com/images/banners/gvZt4jzhaHn61JnVVxmP32vQSkSsFAW728x90_ufazeed.gif" alt="">
-        </a>
-    </div>
 
     <!-- toast -->
     <div id="toast" class="modal hidden">
@@ -426,11 +432,6 @@
 
     @yield('container')
     @yield('aside')
-    <div class="advert container text-center {{empty($users->id)?"":"hidden"}}">
-        <a class="quangcao" href="{{route("form.regester")}}">
-            <img class="w-60 banner__quangcao"  src="https://www.movie678.com/images/banners/PEKDmaXrfnx20N1bkyYbDl2IXjI6Yjo3A9B3E9C-86EB-4DCD-8B41-8F105475E5E4.gif" alt="">
-        </a>
-    </div>
     <footer class="mb-0 mt-2">
         <div class="container">
             <div class="row justify-content-between">
@@ -440,7 +441,7 @@
                     <div class="footer__connect">
                         <a href="mailto:movibesfilm@gmail.com"><i class="fa-solid fa-envelope"></i>
                             Email: movibesfilm@gmail.com</a><br>
-                        <a href="tel:+84325024277"><i class="fa-solid fa-phone-volume"></i>Phone: 0325024277</a><br>
+                        <a href="tel:+84325024277"><i class="fa-solid fa-phone-volume"></i>Phone: 0325024xxx</a><br>
                         <a href="https://goo.gl/maps/TzRZpupQuskCzBQ86" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-pin"></i>Địa chỉ: 200/34 Đường Tô Ký, Đông hưng
                             Thuận,
                             Quận 12, TP. HCM</a> <br>
@@ -491,4 +492,5 @@
     nonce="OxIyeDUH"></script>
 
 @yield('javascrpit')
+
 </html>
