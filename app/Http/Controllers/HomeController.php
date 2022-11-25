@@ -35,6 +35,8 @@ class HomeController extends Controller
         $id = substr($id, 6);
         $dbusers = new UserModel();
         $users = $dbusers->getAllifmUser();
+        $checkepisode=DB::table("film")->where("id_film",$id)->first()->episode_current;
+        if($episode>$checkepisode) $episode= $checkepisode;
         $fiml = new ShowFilmModel();
         $dbfiml = $fiml->getDeltailFilm($episode, $id);
         $category=$dbfiml->category;

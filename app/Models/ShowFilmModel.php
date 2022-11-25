@@ -65,6 +65,7 @@ class ShowFilmModel extends Model
         ->select(['esp','hhd','vip'])
          ->get();
        
+         
         $fimldetail=DB::table("film_detail")
         ->where('id_filmDetail',$id)
         ->where('esp',$episode)
