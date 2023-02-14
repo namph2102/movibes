@@ -1,7 +1,9 @@
 
 # Website Xem Phim
 Link Website Demo : https://movibes.online/
+
 Công nghệ : 
+
     +FE: HTML, CSS ( Bootstrap 5,Sass), PHP (Laravel) 
     +BE: mySql
 
