@@ -33,7 +33,6 @@ Một số nghiệp vụ:
       <li>Seo</li>
       <li>Search</li>
       <li>Comment</li>
- 
-    </ul>
+ </ul>
 
 
